@@ -10,7 +10,7 @@ function generateTarget() {
 function compareGuesses(humanGuess, computerGuess, targetGuess) {
   if (humanGuess < 0 || humanGuess > 9) {
     alert("You have entered an invalid number. Try again!");
-    return;
+    return false;
   }
   let humanDiff = Math.abs(humanGuess - targetGuess);
   let computerDiff = Math.abs(computerGuess - targetGuess);
@@ -25,7 +25,7 @@ function compareGuesses(humanGuess, computerGuess, targetGuess) {
 }
 
 function updateScore(winner) {
-  winner.toLowerCase();
+  winner = winner.toLowerCase();
   
   if (winner === "human") {
     humanScore += 1;
