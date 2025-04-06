@@ -26,6 +26,7 @@ function compareGuesses(humanGuess, computerGuess, targetGuess) {
 
 function updateScore(winner) {
   winner.toLowerCase();
+  
   if (winner === "human") {
     humanScore += 1;
   } else if (winner === "computer") {
